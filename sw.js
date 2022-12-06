@@ -2,7 +2,7 @@ self.addEventListener('install', e =>{
     console.log("Installed!")
     e.waitUntil(
         caches.open("pwa-cache").then(cache =>{
-            return cache.addAll(['/Images/logo_512x512.png','/Images/logo_192x192.png'])
+            return cache.addAll(['index.html','servicew.js'])
         })
     )
 })
