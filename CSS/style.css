@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    background: url('/Images/BG.jpg') no-repeat;
+    background: url('/GYMpwa.github.io/Images/BG.jpg') no-repeat;
     height: 701px;
     color: white;
     font-family: 'Baloo Bhaijaan 2', cursive;
@@ -131,7 +131,7 @@ form input {
         display: block;
     }
     body{
-        background: url('/Images/BG2.jpg') no-repeat;
+        background: url('/GYMpwa.github.io/Images/BG2.jpg') no-repeat;
     }
 }
 
