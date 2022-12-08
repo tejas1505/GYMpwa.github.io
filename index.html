@@ -10,116 +10,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&display=swap" rel="stylesheet">
     <link rel="manifest" href="manifest.webmanifest">
     <title>Lord's Gym</title>
+    <link rel="stylesheet" href="/CSS/style.css">
     <style>
-        html{
-            overflow-x: hidden;
-        }
-        body {
-            margin: 0px;
-            padding: 0px;
-            background: url('Images/BG.jpg') no-repeat;
-            height: 701px;
-            color: white;
-            font-family: 'Baloo Bhaijaan 2', cursive;
-        }
         
-        .left {
-            display: inline-block;
-            position: absolute;
-            left: 34px;
-            top: 9px;
-            /* border: 2px solid red; */
-        }
-
-        .left img {
-            width: 62px;
-        }
-
-        .mid {
-            display: block;
-            /* top: 10px; */
-            margin: 20px auto;
-            width: 40%;
-            /* border: 2px solid green; */
-        }
-
-        .right {
-            position: absolute;
-            right: 34px;
-            top: 26px;
-            display: inline-block;
-            /* border: 2px solid blue; */
-        }
-
-        .navbar li {
-            font-size: 22px;
-            display: inline-block;
-        }
-
-        .navbar li a {
-            text-decoration: none;
-            color: white;
-            padding: 17px 17px;
-        }
-
-        .navbar li a:hover,
-        .navbar li a.active {
-            text-decoration: underline;
-            color: rgb(99, 104, 99);
-        }
-
-        .btn {
-            background-color: black;
-            padding: 1px 10px;
-            color: aliceblue;
-            border: 1px solid white;
-            cursor: pointer;
-            border-radius: 7px;
-            font-family: 'Baloo Bhaijaan 2', cursive;
-        }
-
-        .btn:hover {
-            background-color: rgb(141, 140, 140);
-        }
-
-        .container {
-            width: 43%;
-            margin: 99px 48px;
-            padding: 20px;
-            border: 2px solid white;
-            border-radius: 12px;
-        }
-
-        .container h3 {
-            display: block;
-            margin: auto;
-            width: 53%;
-        }
-
-        .container button {
-            display: block;
-            margin: 10px auto;
-            width: 53%;
-            padding: 6px;
-        }
-
-        .form-group {
-            /* padding: 5px; */
-            display: block;
-            width: 53%;
-            margin: auto;
-        }
-
-        .form-group input {
-            border: 1px solid white;
-            border-radius: 5px;
-            width: 342px;
-            text-align: center;
-            padding: 1px;
-            margin: 3px auto;
-            font-size: 17px;
-            font-family: 'Baloo Bhaijaan 2', cursive;
-        }
     </style>
 </head>
 
@@ -132,21 +25,23 @@
             </div>
         </div>
         <div class="mid">
-            <ul class="navbar">
+            <ul class="navbar" id="myTopnav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Fitness Calculator</a></li>
                 <li><a href="#">Contact Us</a></li>
+                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()" style="border:1px solide red;"><i class="fa fa-bars">^</i></a></li>
             </ul>
         </div>
-        <div class="right">
-            <button class="btn">Email</button>
-            <button class="btn">Register</button>
-        </div>
+
     </header>
+    <div class="right">
+        <button class="btn">Email</button>
+        <button class="btn">Register</button>
+    </div>
     <div class="container">
         <h3>Join Lord's Gym For Pure and Great fitness</h3>
-        <form action="nobackend.php">
+        <form>
             <div class="form-group">
                 <input type="text" name="" placeholder="Enter Your Name">
             </div>
@@ -159,9 +54,20 @@
             <div class="form-group">
                 <input type="text" name="" placeholder="Enter Your Locality">
             </div>
-            <button class="btn">Submit</button>
+            <div class="form-group">
+                <button>Submit</button>
+            </div>
         </form>
     </div>
 </body>
-<script src="servicew.js"></script>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+    </script>
 </html>
