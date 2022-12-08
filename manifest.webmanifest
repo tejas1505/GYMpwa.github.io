@@ -1,7 +1,7 @@
 {
     "name": "Simple GYM App",
     "short_name": "GYM App",
-    "start_url": "/",
+    "start_url": "/GYMpwa.github.io",
     "id": "/",
     "display": "standalone",
     "background_color": "#fdfdfd",
