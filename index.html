@@ -8,186 +8,39 @@
     <meta name="theme-color" content="#db4938">
     <link rel="apple-touch-icon" href="favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&display=swap" rel="stylesheet">
-    <link rel="manifest" href="manifest.webmanifest">
     <title>Lord's Gym</title>
+    <link rel="stylesheet" href="/CSS/style.css" media="screen and (min-width : 550px)">
+    <link rel="stylesheet" href="/CSS/style2.css" media="screen and (max-width : 550px)">
+    <link rel="manifest" href="manifest.webmanifest">
     <style>
-        body {
-            margin: 0px;
-            padding: 0px;
-            background: url('Images/BG.jpg') no-repeat;
-            height: 701px;
-            color: white;
-            font-family: 'Baloo Bhaijaan 2', cursive;
-        }
-
-        .left {
-            display: inline-block;
-            position: absolute;
-            left: 34px;
-            top: 9px;
-            /* border: 2px solid red; */
-        }
-
-        .left img {
-            width: 62px;
-        }
-
-        .mid {
-            display: block;
-            /* top: 10px; */
-            margin: 20px 60px;
-            width: auto;
-            /* border: 2px solid green; */
-        }
-
-        .right {
-            position: absolute;
-            right: 34px;
-            top: 26px;
-            display: flex;
-            /* border: 2px solid blue; */
-        }
-
-        .navbar {
-            margin: 0px;
-            width: 100%;
-        }
-
-        .navbar li {
-            font-size: 16px;
-            display: inline-block;
-        }
-
-        .navbar li a {
-            text-decoration: none;
-            color: white;
-            padding: 17px 17px;
-        }
-
-        .navbar li a:hover,
-        .navbar li a.active {
-            text-decoration: underline;
-            color: rgb(99, 104, 99);
-        }
-
-
-
-        .container {
-            width: 43%;
-            margin: 99px 48px auto;
-            padding: 20px;
-            border: 2px solid white;
-            border-radius: 12px;
-        }
-
-        .container h3 {
-            display: block;
-            margin: auto;
-            width: 53%;
-        }
-
-        .btn {
-            background-color: black;
-            padding: 1px 10px;
-            color: aliceblue;
-            font-size: 17px;
-            /* border: 1px solid white; */
-            cursor: pointer;
-            /* border-radius: 7px; */
-        }
-
-        .btn:hover {
-            background-color: rgb(141, 140, 140);
-        }
-
-        form button {
-            border: 1px solid white;
-            padding: 1px 10px;
-            background-color: rgb(20, 19, 19);
-            font-size: 17px;
-            color: rgb(255, 255, 255);
-            border-radius: 7px;
-            display: block;
-            margin: 10px;
-            width: 53%;
-            padding: 6px;
-        }
-
-        form button:hover {
-            background-color: rgb(141, 140, 140);
-            cursor: pointer;
-        }
-
-        form input {
-            border: 1px solid white;
-            padding: 1px 10px;
-            font-size: 17px;
-            color: rgb(7, 14, 22);
-            border-radius: 7px;
-            font-family: 'Baloo Bhaijaan 2', cursive;
-            display: block;
-            margin: 10px;
-            width: 53%;
-            padding: 6px;
-        }
-        .navbar .icon {
-            display: none;
-        }
-
-        @media screen and (max-width: 600px) {
-            .navbar a {
-                display: none;
-            }
-
-            .navbar a.icon {
-                float: right;
-                display: block;
-            }
-            body{
-                background: url('Images/BG2.jpg') no-repeat;
-            }
-        }
-
-        @media screen and (max-width: 600px) {
-            .navbar.responsive {
-                position: relative;
-            }
-
-            .navbar.responsive .icon {
-                position: absolute;
-                right: 0;
-                top: 0;
-            }
-
-            .navbar.responsive a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-        }
-
+        
     </style>
 </head>
 
 <body>
     <header class="header">
         <div class="left">
-            <img src="Images/logo.png">
-            <div style="line-height:0px;font-size:12px;">
-                Lord's Gym
+            <img src="Images/logo.png"><h4>Lord's Gym</h4>
+            <div class="sign">
+                <span><a onclick="myFunction()" id="menu" href="javascript:void(0);"><img src="Images/menu.png" alt="" srcset=" "></a></span>
             </div>
         </div>
         <div class="mid">
-            <ul class="navbar" id="myTopnav">
+            <ul class="navbar" id="">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Fitness Calculator</a></li>
                 <li><a href="#">Contact Us</a></li>
-                <li><a href="javascript:void(0);" class="icon" onclick="myFunction()" style="border:1px solide red;"><i class="fa fa-bars">^</i></a></li>
             </ul>
         </div>
-
     </header>
+    <div class="medianav" id="myTopnav">
+        <ul>
+            <li><a href="#" id="dec" style="text-decoration: none;">Home</a></li>
+            <li><a href="#" id="dec" style="text-decoration: none;">About</a></li>
+            <li><a href="#" id="dec" style="text-decoration: none;">Fitness Calculator</a></li>
+        </ul>
+    </div>
     <div class="right">
         <button class="btn">Email</button>
         <button class="btn">Register</button>
@@ -196,16 +49,16 @@
         <h3>Join Lord's Gym For Pure and Great fitness</h3>
         <form>
             <div class="form-group">
-                <input type="text" name="" placeholder="Enter Your Name">
+                <input type="text" name="" placeholder="Name">
             </div>
             <div class="form-group">
-                <input type="text" name="" placeholder="Enter Your Age">
+                <input type="text" name="" placeholder="Age">
             </div>
             <div class="form-group">
-                <input type="text" name="" placeholder="Enter Your Gender">
+                <input type="text" name="" placeholder="Gender">
             </div>
             <div class="form-group">
-                <input type="text" name="" placeholder="Enter Your Locality">
+                <input type="text" name="" placeholder="Locality">
             </div>
             <div class="form-group">
                 <button>Submit</button>
@@ -213,5 +66,24 @@
         </form>
     </div>
 </body>
-<script src="servicew.js"></script>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+      if (x.className === "medianav") {
+        x.className += " responsive";
+      } else {
+        x.className = "medianav";
+      }
+    }
+    var x = matchMedia("(min-width : 550px)")
+
+    function insidenav(x){
+        if (x.matches){
+            document.getElementById('myTopnav').style.display = 'none'
+            document.getElementById('menu').style.display = 'none'
+        }
+    }
+    insidenav(x)
+    x.addListener(insidenav)
+    </script>
 </html>
