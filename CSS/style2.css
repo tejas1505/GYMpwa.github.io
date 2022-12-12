@@ -4,7 +4,7 @@
     }
     body{
         background: none;
-        background: url('/Images/resBG.png')no-repeat;
+        background: url('./Images/resBG.png')no-repeat;
         background-color: rgba(237, 237, 236, 0.319);
         padding: 0%;
         margin: 0%;
