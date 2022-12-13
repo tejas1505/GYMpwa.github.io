@@ -2,7 +2,7 @@ self.addEventListener('install', e =>{
     console.log("Installed!")
     e.waitUntil(
         caches.open("pwa-cache").then(cache =>{
-            return cache.addAll(['index.html','servicew.js','/GYMpwa.github.io/Images/BG.jpg', '/GYMpwa.github.io/Images/BG2.jpg','/GYMpwa.github.io/Images/logo.png','/GYMpwa.github.io/Images/logo_144x144.png','/GYMpwa.github.io/logo_512x512.png','/GYMpwa.github.io/CSS/style.css','/GYMpwa.github.io/CSS/style2.css'])
+            return cache.addAll(['index.html','servicew.js','/GYMpwa.github.io/Images/BG.jpg','/GYMpwa.github.io/Images/logo.png','/GYMpwa.github.io/Images/logo_144x144.png','/GYMpwa.github.io/CSS/style.css','/GYMpwa.github.io/CSS/style2.css'])
         })
     )
 })
