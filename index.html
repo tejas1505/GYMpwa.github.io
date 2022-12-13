@@ -68,6 +68,7 @@
 </body>
 <script>
     function myFunction() {
+        console.log("Inside myFunction");
         var x = document.getElementById("myTopnav");
       if (x.className === "medianav") {
         x.className += " responsive";
@@ -78,6 +79,7 @@
     var x = matchMedia("(min-width : 550px)")
 
     function insidenav(x){
+        console.log("Inside insidenav()");
         if (x.matches){
             document.getElementById('myTopnav').style.display = 'none'
             document.getElementById('menu').style.display = 'none'
