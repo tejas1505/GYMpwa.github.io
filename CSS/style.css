@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
-    background: url('Images/BG.jpg') no-repeat;
+    background: url('../Images/BG.jpg') no-repeat;
     height: 701px;
     color: white;
     font-family: 'Baloo Bhaijaan 2', cursive;
